@@ -1,0 +1,29 @@
+{
+	"manifest_version": 2,
+
+	"name": "O'Reilly Download Helper",
+	"description": "A simple helper for downloading free books from O'Reilly",
+	"version": "1.0",
+	"author": "@frehov",
+
+	"content_scripts" : [
+		{
+			"matches": [
+				"http://*.oreilly.com/*/free/*.csp",
+				"http://*.oreilly.com/*/free/*.csp?intcmp*",
+				"https://*.oreilly.com/*/free/*.csp",
+				"https://*.oreilly.com/*/free/*.csp?intcmp*"
+			],
+			"js": [
+				"jquery-3.3.1.min.js",
+				"download.js"
+			]
+		}
+	],
+
+	"permissions": [
+        "tabs",
+        "http://*/",
+        "https://*/"
+    ]
+}
