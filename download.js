@@ -1,18 +1,23 @@
 var pageURL = location.href.replace(/csp.*/, "csp?download=true");
 var downloadURL = pageURL.replace(/\/free\//, "/free/files/").replace(/csp.*/, "");
 
-dlBtn = document.getElementById("x_a")
+frmBtn = document.getElementById("x_a")
 
-dlBtn.addEventListener("click", function () {
+frmBtn.addEventListener("click", function () {
     createCookie("DownloadFormFilled", true, 1);
 });
 
+//dlBtn = "<button type=\"submit\" id=\"x_b\" name=\"x-b\" value=\"Download Your Free Ebook\" class=\"btn\" onclick=\"window.location=\'"+ encodeURIComponent(pageURL) +"\';\">Download the free ebook</button>"
+dlBtn = "<a href='" + pageURL + "' class='btn'>Go to Download</a>"
+
 if(readCookie("DownloadFormFilled") === "true") {
     downloadHeader = $(".download-form > .fwb").text("Download the eBook");
-    var dlDiv = $(".download-form");
-    dlDiv.empty();
-    dlDiv.append(downloadHeader);
+    var dlDiv = $(".download-form #download_requests_form");
+    //dlDiv.empty();
+    //dlDiv.append(downloadHeader);
+    dlDiv.append(dlBtn);
 
+/*
     $.get(pageURL, null, function(text) {
         var downloadField = $(text).find(".download-links");
         dlDiv.append(downloadField);
@@ -22,6 +27,7 @@ if(readCookie("DownloadFormFilled") === "true") {
             $(buttons[i]).attr("href", downloadURL.concat(buttons[i].childNodes[1].textContent.toLowerCase()));
         }
     });
+*/
 }
 
 function createCookie(name,value,days) {
