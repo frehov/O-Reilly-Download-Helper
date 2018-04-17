@@ -1,12 +1,12 @@
 var pageURL = location.href.replace(/csp.*/, "csp?download=true");
 
 document.getElementById("x_a").addEventListener("click", function () {
-    createCookie("DownloadFormFilled", true, 1);
+    createCookie("DLFRMFL", true, 0.5);
 });
 
 dlBtn = "<a href='" + pageURL + "' class='btn'>Go to Download</a>";
 
-if(readCookie("DownloadFormFilled") === "true") {
+if(readCookie("DLFRMFL") === "true") {
     $(".download-form > .fwb").text("Download the eBook");
     $(".download-form #download_requests_form").append(dlBtn);
 }

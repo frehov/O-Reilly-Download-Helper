@@ -3,7 +3,7 @@
 
 	"name": "O'Reilly Download Helper",
 	"description": "A simple helper for downloading free books from O'Reilly",
-	"version": "1.0",
+	"version": "1.1",
 	"author": "@frehov",
 
 	"content_scripts" : [
