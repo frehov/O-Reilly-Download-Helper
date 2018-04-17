@@ -8,7 +8,7 @@ dlBtn = "<a href='" + pageURL + "' class='btn'>Go to Download</a>";
 
 if(readCookie("DLFRMFL") === "true") {
     $(".download-form > .fwb").text("Download the eBook");
-    $(".download-form #download_requests_form").append(dlBtn);
+    $("#download_requests_form").append(dlBtn);
 }
 
 function createCookie(name,value,days) {
