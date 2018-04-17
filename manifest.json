@@ -26,5 +26,9 @@
 		"cookies",
         "http://*/",
         "https://*/"
-    ]
+    ],
+
+	"icons": {
+		"128": "icon128.png"
+	}
 }

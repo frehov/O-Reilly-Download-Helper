@@ -3,4 +3,5 @@ Chrome Extensions that helps in downloading free books from O'Reilly
 
 Load the plugin using developer mode in extension settings.
 
-Plugin creates a cookie with value "true" if you've filled the form previously this day.
+Plugin creates a cookie with value "true" if you've filled the form previously this day.  
+THe cookie expires after 12H
